@@ -5,7 +5,6 @@ namespace CufferOnlyUncuff
 {
     using Exiled.API.Features;
 
-    
     /// <summary>
     /// General event handlers.
     /// </summary>
