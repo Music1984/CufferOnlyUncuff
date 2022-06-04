@@ -34,6 +34,7 @@ namespace CufferOnlyUncuff
                     return;
                 }
 
+                ev.Cuffer.ShowHint(plugin.Config.FailHint);
                 ev.IsAllowed = false;
             }
         }
