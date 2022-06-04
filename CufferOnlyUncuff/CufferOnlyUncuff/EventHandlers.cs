@@ -31,6 +31,7 @@ namespace CufferOnlyUncuff
             {
                 if (ev.Cuffer == value)
                 {
+                    cuffedList.Remove(ev.Target);
                     return;
                 }
 
