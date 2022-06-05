@@ -20,5 +20,17 @@ namespace CufferOnlyUncuff
         /// </summary>
         [Description("The message shown to the player on a failed uncuff.")]
         public string FailHint { get; set; } = "Only the person who cuffed this person can uncuff them.";
+
+        /// <summary>
+        /// Gets or sets the team to uncuff
+        /// </summary>
+        [Description("Same team uncuffing.")]
+        public bool scientists { get; set; } = true;
+
+        /// <summary>
+        /// Gets or sets the team to uncuff
+        /// </summary>
+        [Description("Same team uncuffing.")]
+        public bool classd { get; set; } = true;
     }
 }

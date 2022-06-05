@@ -28,7 +28,7 @@ namespace CufferOnlyUncuff
         {
             if (cuffedList.TryGetValue(ev.Target, out Player value))
             {
-                if (ev.Cuffer == value)
+                if (ev.Cuffer == value || (ev.Cuffer.Role == RoleType.Scientist && ev.Target.Role == RoleType.Scientist && plugin.Config.scientists) || (ev.Cuffer.Role == RoleType.ClassD && ev.Target.Role == RoleType.ClassD && plugin.Config.classd))
                 {
                     cuffedList.Remove(ev.Target);
                     return;
