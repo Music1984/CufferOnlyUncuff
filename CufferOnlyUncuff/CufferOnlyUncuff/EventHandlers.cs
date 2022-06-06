@@ -21,7 +21,8 @@ namespace CufferOnlyUncuff
 
         public void OnCuffing(HandcuffingEventArgs ev)
         {
-            cuffedList.Add(ev.Target, ev.Cuffer);
+            if (!cuffedList.TryGetValue(ev.Target, out Player value))
+                cuffedList.Add(ev.Target, ev.Cuffer);
         }
 
         public void OnUncuffing(RemovingHandcuffsEventArgs ev)
