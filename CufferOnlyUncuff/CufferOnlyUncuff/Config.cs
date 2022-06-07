@@ -24,13 +24,13 @@ namespace CufferOnlyUncuff
         /// <summary>
         /// Gets or sets the team to uncuff
         /// </summary>
-        [Description("Same team uncuffing.")]
-        public bool scientists { get; set; } = true;
+        [Description("Same team uncuffing.(Guards, MTF, Scientist")]
+        public bool Foundation { get; set; } = true;
 
         /// <summary>
         /// Gets or sets the team to uncuff
         /// </summary>
-        [Description("Same team uncuffing.")]
-        public bool classd { get; set; } = true;
+        [Description("Same team uncuffing.(Chaos, ClassD)")]
+        public bool Insurgency { get; set; } = true;
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Exiled.API.Enums;
 using Exiled.Events.EventArgs;
 
 namespace CufferOnlyUncuff
@@ -29,7 +30,7 @@ namespace CufferOnlyUncuff
         {
             if (cuffedList.TryGetValue(ev.Target, out Player value))
             {
-                if (ev.Cuffer == value || (ev.Cuffer.Role == RoleType.Scientist && ev.Target.Role == RoleType.Scientist && plugin.Config.scientists) || (ev.Cuffer.Role == RoleType.ClassD && ev.Target.Role == RoleType.ClassD && plugin.Config.classd))
+                if (ev.Cuffer == value || (ev.Cuffer.Role.Side != Side.ChaosInsurgency && ev.Target.Role.Side != Side.ChaosInsurgency == plugin.Config.Foundation) || (ev.Cuffer.Role.Side != Side.Mtf && ev.Target.Role.Side != Side.Mtf && plugin.Config.Insurgency))
                 {
                     cuffedList.Remove(ev.Target);
                     return;
